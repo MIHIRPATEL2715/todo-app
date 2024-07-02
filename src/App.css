@@ -1,0 +1,15 @@
+.main {
+  text-align: center;
+  width: 100%;
+  height: inherit;
+  align-items: center;
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+.todo-container {
+  border: 2px solid rgb(0, 0, 0);
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 600px;
+}
