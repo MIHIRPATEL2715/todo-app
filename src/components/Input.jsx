@@ -1,26 +1,26 @@
 import "./general.css";
 function Input() {
   return (
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-6">
+    <div className="container text-center">
+      <div className="row">
+        <div className="col-6">
           <input
-            class="form-control"
+            className="form-control"
             type="text"
             placeholder="enter text"
             aria-label="default input example"
           />
         </div>
-        <div class="col-4">
+        <div className="col-4">
           <input
-            class="form-control"
+            className="form-control"
             type="date"
             placeholder="date"
             aria-label="default input example"
           />
         </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-success">
+        <div className="col-2">
+          <button type="button" className="btn btn-success">
             Add
           </button>
         </div>

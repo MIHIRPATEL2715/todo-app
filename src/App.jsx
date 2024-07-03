@@ -1,6 +1,7 @@
 import Hedding from "./components/Hedding";
 import Input from "./components/Input";
 import Item from "./components/Item";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {
@@ -11,13 +12,13 @@ function App() {
   ];
 
   return (
-    <div class="main">
-      <center class="todo-container">
+    <center>
+      <div className="todo-container">
         <Hedding />
         <Input />
         <Item itemlist={list} />
-      </center>
-    </div>
+      </div>
+    </center>
   );
 }
 

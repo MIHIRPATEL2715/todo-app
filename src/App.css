@@ -1,15 +1,31 @@
-.main {
-  text-align: center;
-  width: 100%;
-  height: inherit;
-  align-items: center;
-  box-sizing: border-box;
-  /* background-color: black; */
-}
 .todo-container {
   border: 2px solid rgb(0, 0, 0);
-  margin: 5px;
+  margin: 20px;
   padding: 5px;
   border-radius: 10px;
+  box-sizing: border-box;
   width: 600px;
+  background-color: antiquewhite;
+  box-shadow: 0 0 20px 20px rgba(223, 166, 73, 0.292);
+}
+.form-control {
+  font-size: 18px;
+  border: 2px solid black;
+}
+button {
+  text-align: center;
+}
+p {
+  float: left;
+}
+.row {
+  margin: 5px;
+  background-color: rgba(61, 97, 126, 0.389);
+  padding: 3px;
+  border-radius: 10px;
+  text-align: center;
+}
+.hedding {
+  font-weight: 700;
+  margin: 7px;
 }
