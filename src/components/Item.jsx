@@ -1,33 +1,19 @@
 import "./general.css";
-function Item() {
+function Item({ itemlist }) {
   return (
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-6">
-          <p>Birthday Celebration</p>
-        </div>
-        <div class="col-4">
-          <p>27/01/2025</p>
-        </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-danger">
-            Delete
-          </button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-6">
-          <p>Visit Tample</p>
-        </div>
-        <div class="col-4">
-          <p>27/10/2024</p>
-        </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-danger">
-            Delete
-          </button>
-        </div>
+    <div className="container text-center">
+      <div className="col-12">
+        {itemlist.map((i) => (
+          <div className="row">
+            <div className="col-6">{i.name}</div>
+            <div className="col-4">{i.date}</div>
+            <div className="col-2">
+              <button type="button" className="btn btn-danger">
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
