@@ -4,7 +4,7 @@
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
-  width: 600px;
+  max-width: 600px;
   background-color: antiquewhite;
   box-shadow: 0 0 20px 20px rgba(223, 166, 73, 0.292);
 }
