@@ -3,10 +3,7 @@ import "./general.css";
 function Input({ handleOnClick }) {
   let [todowork, state] = useState();
   let date;
-  const resetform = () => {
-    todowork = "";
-    state("");
-  };
+
   return (
     <div className="container text-center">
       <div className="row">
@@ -14,6 +11,9 @@ function Input({ handleOnClick }) {
           <input
             onChange={(event) => {
               todowork = event.target.value;
+            }}
+            onFocus={(event) => {
+              if (todowork === "clear") event.target.value = "";
             }}
             className="form-control"
             type="text"
@@ -25,7 +25,10 @@ function Input({ handleOnClick }) {
           <input
             onChange={(event) => {
               date = event.target.value;
-              console.log(date);
+              console.log(event);
+            }}
+            onFocus={(event) => {
+              if (date === undefined) event.target.value = "";
             }}
             className="form-control"
             type="date"
@@ -35,12 +38,13 @@ function Input({ handleOnClick }) {
         </div>
         <div className="col-2">
           <button
-            type="Reset"
+            type="submit"
             onClick={() => {
               let arr = [{ name: todowork, date: date }];
-              console.log(arr);
+              console.log(date);
               handleOnClick(arr);
-              resetform();
+              state("clear");
+              // console.log(todowork);
             }}
             className="btn btn-success"
           >

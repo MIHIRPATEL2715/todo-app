@@ -7,9 +7,9 @@ import { useState } from "react";
 
 function App() {
   let [list, cstate] = useState([
-    { name: "birthday", date: "27/01/2005" },
-    { name: "visit temple", date: "25/01/2005" },
-    { name: "go for walk", date: "23/06/2025" },
+    { name: "birthday", date: "2024-01-27" },
+    { name: "visit temple", date: "2024-02-05" },
+    { name: "go for walk", date: "2024-05-17" },
   ]);
 
   const handelonchange = (event) => {
@@ -24,13 +24,18 @@ function App() {
       alert("please enter date and todo work");
     }
   };
+  let handledelete = (i) => {
+    list.pop(i);
+    let newlist = [...list];
+    cstate(newlist);
+  };
 
   return (
     <center>
       <div className="todo-container">
         <Hedding />
         <Input handleOnClick={handelonchange} />
-        <Item itemlist={list} />
+        <Item itemlist={list} handledelete={handledelete} />
       </div>
     </center>
   );
