@@ -4,13 +4,10 @@ import Item from "./components/Item";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useState } from "react";
+import Errormessage from "./components/Errormessage";
 
 function App() {
-  let [list, cstate] = useState([
-    { name: "birthday", date: "2024-01-27" },
-    { name: "visit temple", date: "2024-02-05" },
-    { name: "go for walk", date: "2024-05-17" },
-  ]);
+  let [list, cstate] = useState([]);
 
   const handelonchange = (event) => {
     console.log(event);
@@ -35,6 +32,7 @@ function App() {
       <div className="todo-container">
         <Hedding />
         <Input handleOnClick={handelonchange} />
+        {list.length === 0 && <Errormessage></Errormessage>}
         <Item itemlist={list} handledelete={handledelete} />
       </div>
     </center>

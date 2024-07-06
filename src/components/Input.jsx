@@ -1,20 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./general.css";
 function Input({ handleOnClick }) {
-  let [todowork, state] = useState();
-  let date;
+  // let [todowork, state] = useState();
+  // let date;
+  let todowork = useRef();
+  let date = useRef();
 
   return (
     <div className="container text-center">
       <div className="row">
         <div className="col-6">
           <input
-            onChange={(event) => {
-              todowork = event.target.value;
-            }}
-            onFocus={(event) => {
-              if (todowork === "clear") event.target.value = "";
-            }}
+            ref={todowork}
             className="form-control"
             type="text"
             placeholder="enter text"
@@ -23,13 +20,7 @@ function Input({ handleOnClick }) {
         </div>
         <div className="col-4">
           <input
-            onChange={(event) => {
-              date = event.target.value;
-              console.log(event);
-            }}
-            onFocus={(event) => {
-              if (date === undefined) event.target.value = "";
-            }}
+            ref={date}
             className="form-control"
             type="date"
             placeholder="date"
@@ -40,10 +31,14 @@ function Input({ handleOnClick }) {
           <button
             type="submit"
             onClick={() => {
-              let arr = [{ name: todowork, date: date }];
+              let arr = [
+                { name: todowork.current.value, date: date.current.value },
+              ];
               console.log(date);
               handleOnClick(arr);
-              state("clear");
+              todowork.current.value = "";
+              date.current.value = "";
+              // state("clear");
               // console.log(todowork);
             }}
             className="btn btn-success"

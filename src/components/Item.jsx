@@ -5,7 +5,9 @@ function Item({ itemlist, handledelete }) {
       <div className="col-12">
         {itemlist.map((i) => (
           <div className="row">
-            <div className="col-6">{i.name}</div>
+            <div className="col-6" key={i.name}>
+              {i.name}
+            </div>
             <div className="col-4">{i.date}</div>
             <div className="col-2">
               <button
