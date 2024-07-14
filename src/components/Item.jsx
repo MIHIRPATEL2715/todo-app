@@ -15,7 +15,7 @@ function Item({ itemlist, handledelete }) {
                 type="button"
                 className="btn btn-danger"
               >
-                Delete
+                Remove
               </button>
             </div>
           </div>
