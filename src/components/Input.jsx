@@ -14,7 +14,7 @@ function Input({ handleOnClick }) {
             ref={todowork}
             className="form-control"
             type="text"
-            placeholder="enter text"
+            placeholder="Enter TODO"
             aria-label="default input example"
           />
         </div>
@@ -23,7 +23,7 @@ function Input({ handleOnClick }) {
             ref={date}
             className="form-control"
             type="date"
-            placeholder="date"
+            placeholder="Date"
             aria-label="default input example"
           />
         </div>
